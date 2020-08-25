@@ -1,25 +1,10 @@
-# tftp
+# README
 
-To build
+#### Normal Run
 
-```
-docker build --rm --tag=pghalliday/tftp .
-```
+docker run -p 0.0.0.0:69:69/udp -v /Users/laguerre/code/utilities/tftp-hpa:/var/tftpboot -i -t 3bars/tftp
 
-To run
+#### Alternative Run
 
-```
-docker run -p 0.0.0.0:69:69/udp -i -t pghalliday/tftp
-```
+docker run -p 0.0.0.0:69:69/udp -i -t 3bars/tftp
 
-Mounts the following volume for persistent data
-
-```
-/var/tftpboot
-```
-
-To map the volume to a host directory
-
-```
-docker run -p 0.0.0.0:69:69/udp -v /var/tftpboot:/var/tftpboot -i -t pghalliday/tftp
-```
